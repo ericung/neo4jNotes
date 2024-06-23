@@ -1,6 +1,6 @@
 # neo4jNotes
 
-Person in the space of FRIENDS
+Person in the space of $FRIENDS$
 
 ```cypher
 CREATE (ee:Person {name: 'Emil', from: 'Sweden', kloutScore: 99})
@@ -17,7 +17,7 @@ CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 (rvb)-[:KNOWS]->(ally)
 ```
 
-Person in the space of MOVIES
+Person in the space of $MOVIES$
 
 ```cypher
 CREATE
