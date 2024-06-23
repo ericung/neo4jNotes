@@ -1,5 +1,7 @@
 # neo4jNotes
 
+The intention to using neo4j is to write cleaner proofs but not so much as to make it so unambiguous that it loses intuition.
+
 $FRIENDS$ in the space of $EDGES \in PERSON$
 
 ```cypher
