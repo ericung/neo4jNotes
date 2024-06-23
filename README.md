@@ -13,6 +13,7 @@ CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 ```
 
 Person in the space of MOVIES
+
 ```sql
 CREATE
   (keanu:Person {name: 'Keanu Reever'}),
@@ -28,3 +29,8 @@ CREATE
 $FRIENDS \cap MOVIES = \emptyset $
 
 Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \subseteq MOVIES \subseteq PERSON$
+
+```sql
+MATCH (ee:Person)-[:KNOWS]-(friends)
+WHERE ee.name = 'Emil' RETURN ee, friends
+```
