@@ -45,4 +45,5 @@ WHERE e.name = 'Emil' RETURN e, friends
 ```
 
 $e \in PERSON$ such that name of e is Emil
-$friends \in KNOWS \subseteq PERSON$ such that name of e Emil
+
+$friends \in KNOWS \subseteq PERSON$
