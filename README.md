@@ -1,6 +1,6 @@
 # neo4jNotes
 
-$FRIENDS$ in the space of $PERSON$
+$FRIENDS$ in the space of $EDGES \in PERSON$
 
 ```cypher
 CREATE (ee:Person {name: 'Emil', from: 'Sweden', kloutScore: 99})
@@ -17,7 +17,7 @@ CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 (rvb)-[:KNOWS]->(ally)
 ```
 
-$MOVIES$ in the space of $PERSON$
+$MOVIES$ in the space of $EDGES \in PERSON$
 
 ```cypher
 CREATE
@@ -33,9 +33,9 @@ CREATE
 
 $FRIENDS \cap MOVIES = \emptyset $
 
-$FRIENDS \cup MOVIES = PERSONS$
+$FRIENDS \cup MOVIES = EDGES \in PERSONS$
 
-Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \subseteq MOVIES \subseteq PERSON$
+Relations $KNOWS \in FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \in MOVIES \subseteq PERSON$
 
 As opposed to entity tables in SQL
 
