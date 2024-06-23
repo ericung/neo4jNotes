@@ -27,4 +27,4 @@ CREATE
 
 $FRIENDS \cap MOVIES = \emptyset $
 
-The relation $\KNOWS \in FRIENDS$ and $\ACTED_IN \in MOVIES$ is equivalent
+Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \subseteq MOVIES \subseteq PERSON$
