@@ -1,7 +1,7 @@
 # neo4jNotes
 
 Person in the space of FRIENDS
-```sql
+```cypher
 CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 (ir:Person { name: 'Ian', from: 'England', title: 'author' }),
 (rvb:Person { name: 'Rik', from: 'Belgium', pet: 'Orval' }),
@@ -14,7 +14,7 @@ CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 
 Person in the space of MOVIES
 
-```sql
+```cypher
 CREATE
   (keanu:Person {name: 'Keanu Reever'}),
   (laurence:Person {name: 'Laurence Fishburne'}),
@@ -30,7 +30,9 @@ $FRIENDS \cap MOVIES = \emptyset $
 
 Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \subseteq MOVIES \subseteq PERSON$
 
-```sql
+As opposed to entity tables in SQL
+
+```cypher
 MATCH (ee:Person)-[:KNOWS]-(friends)
 WHERE ee.name = 'Emil' RETURN ee, friends
 ```
