@@ -50,6 +50,6 @@ WHERE e.name = 'Emil' RETURN e, friends
 
 $e \in PERSON$ such that name of e is Emil
 
-$friends \in KNOWS \subseteq PERSON$
+$FRIENDS \in KNOWS \subseteq PERSON$
 
 $FRIENDS$ and $MOVIES$ form the basis of Persons.
