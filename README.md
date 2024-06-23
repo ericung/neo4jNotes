@@ -1,6 +1,11 @@
 # neo4jNotes
 
 Person in the space of FRIENDS
+
+```cypher
+CREATE (ee:Person {name: 'Emil', from: 'Sweden', kloutScore: 99})
+```
+
 ```cypher
 CREATE (js:Person { name: 'Johan', from: 'Sweden', learn: 'surfing' }),
 (ir:Person { name: 'Ian', from: 'England', title: 'author' }),
@@ -28,11 +33,16 @@ CREATE
 
 $FRIENDS \cap MOVIES = \emptyset $
 
+$FRIENDS \cup MOVIES = PERSONS$
+
 Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore IN \subseteq MOVIES \subseteq PERSON$
 
 As opposed to entity tables in SQL
 
 ```cypher
-MATCH (ee:Person)-[:KNOWS]-(friends)
-WHERE ee.name = 'Emil' RETURN ee, friends
+MATCH (e:Person)-[:KNOWS]-(friends)
+WHERE e.name = 'Emil' RETURN e, friends
 ```
+
+$e \in PERSON$ such that name of e is Emil
+$friends \in KNOWS \subseteq PERSON$ such that name of e Emil
