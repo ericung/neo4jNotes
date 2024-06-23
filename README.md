@@ -39,6 +39,8 @@ Relations $KNOWS \subseteq FRIENDS \subseteq PERSON$ and $ACTED\textunderscore I
 
 As opposed to entity tables in SQL
 
+$KNOWS$ has the columns since and rating
+
 ```cypher
 MATCH (e:Person)-[:KNOWS]-(friends)
 WHERE e.name = 'Emil' RETURN e, friends
